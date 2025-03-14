@@ -427,6 +427,7 @@ a[class] {
   border: none;
   user-select: none;
   transition: background var(--transition-duration);
+  z-index: 100;
 }
 @media (hover: hover) {
   .fixed-button:hover {

@@ -16,6 +16,7 @@
     border: none;
     user-select: none;
     transition: background var(--transition-duration);
+    z-index: 100;
 
     @include hover {
         background-color: var(--color-button-green-3);
