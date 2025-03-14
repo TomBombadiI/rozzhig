@@ -1,0 +1,22 @@
+@use 'normilize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/fixed-button';
+@use 'blocks/button';
+@use 'blocks/modal';
+@use 'blocks/logo';
+@use 'blocks/section';
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/benefits';
+@use 'blocks/products';
+@use 'blocks/offer';
+@use 'blocks/why';
+@use 'blocks/sertificates';
+@use 'blocks/services';
+@use 'blocks/order';
+@use 'blocks/map';
+@use 'blocks/footer';

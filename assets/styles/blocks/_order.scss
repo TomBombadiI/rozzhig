@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.order {
+    background: url('../images/order-bg.webp') center/cover no-repeat;
+    padding-block: var(--section-padding-y);
+    text-align: center;
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    &__title {
+        color: var(--color-white);
+        text-transform: none;
+    }
+
+    &__button {
+        margin-inline: auto;
+    }
+}

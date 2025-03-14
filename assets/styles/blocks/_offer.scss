@@ -1,0 +1,14 @@
+@use '../helpers' as *;
+
+.offer {
+    padding-block: var(--section-padding-y);
+    background-color: var(--color-orange);
+    text-align: center;
+
+    &__image {
+        margin-bottom: fluid(40, 20);
+        img {
+            margin-inline: auto;
+        }
+    }
+}

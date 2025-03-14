@@ -1,0 +1,96 @@
+@use "../helpers" as *;
+
+.modal {
+    --closeButtonSize: 24px;
+    --offset: 1rem;
+
+    border: none;
+    padding: 0;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.2);
+    transition-duration: var(--modal-animation-duration);
+    pointer-events: none;
+    opacity: 0;
+    transform: translateY(-20%);
+    max-width: 500px;
+    width: 100%;
+    background-color: var(--color-light-bg-3);
+    color: var(--color-gray-2);
+
+    &.open {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateY(0);
+
+
+        &::backdrop {
+            opacity: 0.5;
+        }
+    }
+
+    &.closing {
+        opacity: 0;
+        transform: translateY(-20%);
+
+        &::backdrop {
+            opacity: 0;
+        }
+    }
+
+    &::backdrop {
+        background-color: var(--color-black);
+        opacity: 0;
+        transition: var(--modal-animation-duration);
+    }
+
+    &__wrapper {
+        padding: var(--offset);
+    }
+
+    &__title {
+        color: var(--color-dark-bg);
+        text-align: center;
+        padding-inline: calc(var(--closeButtonSize) + 1rem);
+        margin-bottom: fluid(35, 24);
+    }
+
+    &__close-button {
+        @include flex-center(true);
+
+        position: absolute;
+        top: var(--offset);
+        right: var(--offset);
+        width: var(--closeButtonSize);
+        height: var(--closeButtonSize);
+        background-color: transparent;
+        border: none;
+        padding: 0;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 1rem 0.5rem;
+        border: none;
+        border-radius: var(--border-radius-m);
+        outline: none;
+        background-color: var(--color-light-bg-4);
+        border: 1px solid var(--color-gray);
+        color: var(--color-gray-2);
+
+        &:focus-visible {
+            background-color: var(--color-white);
+        }
+    }
+
+    &__label {
+        &:has([type="checkbox"]) {
+            text-align: center;
+        }
+    }
+}

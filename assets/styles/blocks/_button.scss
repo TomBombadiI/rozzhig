@@ -1,0 +1,45 @@
+@use '../helpers' as *;
+
+.button {
+    @include flex-center(true);
+
+    text-transform: uppercase;
+    padding: 16px fluid(48, 32);
+    background-color: var(--color-button);
+    color: var(--color-black);
+    font-size: fluid(16, 12);
+    font-weight: 500;
+    border-radius: var(--border-radius-s);
+    border: none;
+    user-select: none;
+    cursor: pointer;
+    
+    @include hover {
+        background-color: var(--color-button-2);
+        color: var(--color-black);
+    }
+
+    &:active {
+        scale: 1.02;
+    }
+
+    &--red {
+        background-color: var(--color-red);
+        color: var(--color-white);
+
+        @include hover {
+            background-color: var(--color-red-2);
+            color: var(--color-white);
+        }
+    }
+
+    &--green {
+        background-color: var(--color-button-green);
+        color: var(--color-white);
+
+        @include hover {
+            background-color: var(--color-button-green-2);
+            color: var(--color-white);
+        }
+    }
+}

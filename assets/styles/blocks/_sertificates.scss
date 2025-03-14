@@ -1,0 +1,39 @@
+@use "../helpers" as *;
+
+.sertificates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
+
+    &__slider {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 32px;
+
+        .swiper-slide img {
+            margin-inline: auto;
+        }
+
+        .swiper-pagination {
+            bottom: 0;
+
+            &-bullet {
+                @include square(15px);
+
+                background-color: var(--color-blue-2);
+            }
+        }
+    }
+
+    &__text {
+        margin-block: auto;
+
+        @include mobile {
+            text-align: center;
+        }
+    }
+}

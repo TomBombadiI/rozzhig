@@ -1,0 +1,44 @@
+@use "../helpers" as *;
+
+.benefits {
+    --columnCount: 2;
+
+    display: grid;
+    grid-template-columns: repeat(var(--columnCount), 1fr);
+    gap: 16px;
+
+    @include tablet {
+        --columnCount: 1;
+    }
+
+    &__image {
+        margin-inline: auto;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+
+        &-item {
+            &-title {
+                margin-bottom: 10px;
+                line-height: 1.3;
+            }
+
+            &-icon {
+                @include square(40px);
+
+                color: var(--color-orange);
+            }
+
+            &-description {
+                line-height: 1.6;
+            }
+        }
+    }
+}

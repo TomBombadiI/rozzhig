@@ -1,0 +1,51 @@
+@use "../helpers" as *;
+
+.services {
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+
+        @include mobile {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        row-gap: fluid(24, 16);
+        justify-content: space-between;
+        text-align: center;
+    }
+
+    &__button {
+        margin-inline: auto;
+    }
+
+    &__image {
+        @include flex-center;
+
+        @include mobile {
+            order: -1;
+        }
+    }
+
+    &__footer {
+        background-color: var(--color-violet-bg);
+        outline: 1px solid #ffffff33;
+        outline-offset: -15px;
+        padding: 65px 50px;
+        text-align: center;
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: fluid(40, 20);
+        margin-top: fluid(60, 30);
+
+        &-title {
+            color: inherit;
+        }
+    }
+}

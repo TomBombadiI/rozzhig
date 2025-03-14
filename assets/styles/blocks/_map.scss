@@ -1,0 +1,20 @@
+@use "../helpers" as *;
+
+.map {
+    scroll-margin-top: var(--header-height); /* Указываем высоту шапки */
+    background-color: var(--color-light-bg);
+    padding-top: var(--section-padding-y);
+    text-align: center;
+
+    &__header {
+        margin-bottom: 24px;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+    }
+
+    &__iframe {
+        user-select: none;
+    }
+}

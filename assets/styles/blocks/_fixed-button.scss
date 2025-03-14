@@ -1,0 +1,27 @@
+@use "../helpers" as *;
+
+.fixed-button {
+    --offset: 30px;
+
+    @include square(60px);
+    @include flex-center(true);
+
+    position: fixed;
+    bottom: var(--offset);
+    left: calc(100vw - var(--scrollbar-width) - var(--offset));
+    translate: -100%;
+    background-color: var(--color-button-green);
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    user-select: none;
+    transition: background var(--transition-duration);
+
+    @include hover {
+        background-color: var(--color-button-green-3);
+    }
+
+    &:active {
+        scale: 1.02;
+    }
+}

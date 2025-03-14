@@ -1,0 +1,62 @@
+@use "../helpers" as *;
+
+.products {
+    padding-block: var(--section-padding-y);
+    background: url("../images/products-bg.webp") center/cover no-repeat;
+    background-attachment: fixed;
+    color: var(--color-white);
+
+    &__title {
+        color: inherit;
+    }
+
+    &__body {
+        --columns: 4;
+
+        display: grid;
+        grid-template-columns: repeat(var(--columns), 1fr);
+        gap: 16px;
+
+        @include laptop-s {
+            --columns: 3;
+        }
+
+        @include tablet {
+            --columns: 2;
+        }
+
+        @include mobile {
+            --columns: 1;
+        }
+    }
+
+    &__card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 28px;
+        background-color: var(--color-white);
+        padding: fluid(32, 16);
+        margin-inline: auto;
+
+        @include tablet {
+            max-width: 300px;
+        }
+
+        &-image {
+            flex-grow: 1;
+            height: 209px;
+
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        &-title {
+            font-weight: 400;
+            text-align: center;
+            flex-grow: 1;
+        }
+    }
+}

@@ -1,0 +1,50 @@
+@use '../helpers' as *;
+
+.hero {
+    --columnCount: 2;
+
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url('../images/hero-bg.webp') center/cover no-repeat;
+    background-attachment: fixed;
+    color: var(--color-white);
+    text-align: center;
+
+    @include tablet {
+        --columnCount: 1;
+    }
+
+    &__inner {
+        display: grid;
+        grid-template-columns: repeat(var(--columnCount), 1fr);
+        column-gap: 16px;
+        padding-block: var(--header-height);
+
+        @include tablet {
+            row-gap: 36px;
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__title {
+        line-height: 1.2;
+        color: var(--color-white);
+        margin-bottom: fluid(50, 30);
+    }
+
+    &__subtitle {
+        color: var(--color-white);
+        margin-bottom: fluid(30, 16);
+    }
+    
+    &__image img {
+        margin: 0 auto;
+    }
+}

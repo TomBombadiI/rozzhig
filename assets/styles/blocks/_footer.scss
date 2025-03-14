@@ -1,0 +1,36 @@
+@use "../helpers" as *;
+
+.footer {
+    --columnCount: 3;
+
+    background-color: var(--color-dark-bg);
+    color: var(--color-white);
+    padding: fluid(45, 30);
+
+    &__inner {
+        display: grid;
+        grid-template-columns: 0.8fr 1fr 0.8fr;
+        align-items: center;
+        column-gap: 16px;
+
+        @include tablet {
+            grid-template-columns: 1fr;
+            text-align: center;
+            row-gap: 24px;
+        }
+    }
+
+    &__column {
+        margin-inline: auto;
+    }
+
+    &__column:nth-child(2) {
+        text-align: center;
+    }
+
+    &__column:last-child {
+        display: flex;
+        flex-direction: column;
+        row-gap: 8px;
+    }
+}

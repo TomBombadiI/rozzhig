@@ -1,0 +1,24 @@
+@use '../helpers' as *;
+
+.section {
+    --background: var(--color-white);
+    --bacgroundAttachment: scroll;
+
+    padding-block: var(--section-padding-y);
+    background-color: var(--background);
+    background-attachment: var(--bacgroundAttachment);
+
+    &--gray {
+        background-color: var(--color-light-bg-2);
+    }
+
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: fluid(50, 24);
+
+        &--light {
+            font-weight: 300;
+        }
+    }
+}
