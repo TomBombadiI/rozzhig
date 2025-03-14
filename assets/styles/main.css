@@ -764,7 +764,7 @@ a[class] {
   --columnCount: 2;
   display: flex;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100svh;
   background: url("../images/hero-bg.webp") center/cover no-repeat;
   background-attachment: fixed;
   color: var(--color-white);
