@@ -248,7 +248,7 @@ svg * {
   --container-width: 1140px;
   --container-width-l: 1760px;
   --container-padding-x: 16px;
-  --section-padding-y: clamp(1.875rem, 1.5rem + 1.875vw, 3.75rem);
+  --section-padding-y: clamp(3.125rem, 2.5rem + 3.125vw, 6.25rem);
   --transition-duration: 0.2s;
   --transition-duration-longer: 0.4s;
 }
@@ -766,7 +766,6 @@ a[class] {
   align-items: center;
   min-height: 100svh;
   background: url("../images/hero-bg.webp") center/cover no-repeat;
-  background-attachment: fixed;
   color: var(--color-white);
   text-align: center;
 }
